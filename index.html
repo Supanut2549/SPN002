@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>จองห้องประชุม</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <!-- FullCalendar CSS --> <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet" /> 
+  <!-- FullCalendar JS --> <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+</head>
+<body class="page-booking">
+  <img src="img/logo2025.jpg" alt="โลโก้บริษัท" class="logo">
+  <h2>จองห้องประชุม นิยมชัย</h2>
+  <form id="bookingForm">
+    <label>ชื่อผู้ใช้ที่จองห้องประชุม:</label>
+    <input type="text" id="name" placeholder="ชื่อผู้ใช้">
+    <label>วันเวลาที่ต้องการจอง:</label>
+    <input type="date" id="date">
+    <label>เวลาเริ่มต้น:</label>
+    <input type="time" id="startTime" min="06:00" max="23:59">
+    <label>เวลาสิ้นสุด:</label>
+    <input type="time" id="endTime" min="06:00" max="23:59">
+    <label>เลือกห้องประชุม:</label>
+    <select id="room">
+      <option value="A">ห้องข้างล่าง 20 คน</option>
+      <option value="B">ห้องข้างบน 10 คน</option>
+    </select>
+    <label for="note">หมายเหตุการใช้ห้องประชุม:</label>
+      <textarea id="note" class="form-control" rows="4" placeholder="ลายละเอียดเพิ่มเติม"></textarea>
+    <button type="submit">จอง</button>
+    <tbody></tbody>    
+  </form>
+  <div id="toast"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
