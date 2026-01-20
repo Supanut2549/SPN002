@@ -380,29 +380,6 @@ canvas {
   }
 }
 
-@media (max-width: 768px) {
-  .booking-wrapper {
-    flex-direction: column;
-    gap: 24px;
-    padding: 12px;
-  }
-
-  .booking-form-section,
-  .booking-table-section {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  #bookingTable {
-    font-size: 14px;
-  }
-
-  #bookingForm input,
-  #bookingForm button {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
 /*ย่อขยายข้อมูล*/
 #bookingTable tbody tr:not(.expanded) td:nth-child(n+2):not(:last-child) {
   display: none;
@@ -590,3 +567,36 @@ textarea.adminform-control{ /* ✅ปรับหมายเหตุแอด�
 .room-a { background-color: #42a5f5; /* ฟ้า */ } 
 
 .room-b { background-color: #66bb6a; /* เขียว */ }
+
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .booking-card {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #bookingForm input,
+  #bookingForm select,
+  #bookingForm button,
+  #note {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
