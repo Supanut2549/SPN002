@@ -12,6 +12,8 @@
 <body class="page-booking">
   <img src="img/logo2025.jpg" alt="โลโก้บริษัท" class="logo">
   <h2>จองห้องประชุม นิยมชัย</h2>
+  <div class="main-layout">
+  <div class="left-panel">
   <form id="bookingForm">
     <label>ชื่อผู้ใช้ที่จองห้องประชุม:</label>
     <input type="text" id="name" placeholder="ชื่อผู้ใช้">
@@ -28,9 +30,14 @@
     </select>
     <label for="note">หมายเหตุการใช้ห้องประชุม:</label>
       <textarea id="note" class="form-control" rows="4" placeholder="ลายละเอียดเพิ่มเติม"></textarea>
-    <button type="submit">จอง</button>
-    <tbody></tbody>    
+    <button type="submit">จอง</button>   
   </form>
+  </div>
+  <div class="right-panel"> 
+    <h2>📅บันทึกรายการจองห้องวันนี้</h2>
+    <div id="todayBookings" class="booking-list"></div> 
+  </div>
+</div>
   <div id="toast"></div>
   <script type="module" src="script.js"></script>
 </body>
