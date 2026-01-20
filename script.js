@@ -132,12 +132,14 @@ document.getElementById("bookingForm").addEventListener("submit", async function
   }
 
   if (conflict) {
-    showToast("❌ ช่วงเวลานี้ถูกจองแล้ว!", true);
-  } else {
-    push(bookingRef, { name, date, startTime, endTime, room, key , note});
+  showToast("❌ ช่วงเวลานี้ถูกจองแล้ว!", true);
+} else {
+  push(bookingRef, { name, date, startTime, endTime, room, key , note }).then(() => {
     showToast("✅ จองสำเร็จ!", false);
     document.getElementById("bookingForm").reset();
-  }
+    showTodayBookings(); // ✅ รีเฟรชรายการด้านขวา
+  });
+}
 });
 
 //เปลี่ยนวันที่
@@ -165,19 +167,45 @@ function renderTable(data) {
   }
 }
 
-// ปรับโหมดขาวดำ
-document.getElementById("themeToggle").addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+async function showTodayBookings() {
+  const today = new Date();
+  const yyyyCE = today.getFullYear(); // ค.ศ.
+  const yyyyBE = yyyyCE + 543;        // พ.ศ.
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
 
-  // บันทึกสถานะธีมไว้ใน localStorage
-  const isDark = document.body.classList.contains("dark-mode");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-});
+  const todayCE = `${yyyyCE}-${mm}-${dd}`;
+  const todayBE = `${yyyyBE}-${mm}-${dd}`;
 
-// โหลดธีมจาก localStorage เมื่อเปิดหน้า
-window.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark-mode");
+  const bookingRef = ref(database, "bookings");
+  const snapshot = await get(bookingRef);
+  const data = snapshot.val();
+
+  const container = document.getElementById("todayBookings");
+  container.innerHTML = "";
+
+  let found = false;
+
+  for (const id in data) {
+    const booking = data[id];
+    if (booking.date === todayCE || booking.date === todayBE) {
+      found = true;
+      const card = document.createElement("div");
+      card.className = `booking-card room-${booking.room.toLowerCase()}`;
+      card.innerHTML = `
+        <strong>${booking.name}</strong> (${booking.room})<br>
+        🕒 ${booking.startTime} - ${booking.endTime}<br>
+        📝 ${booking.note || "-"}
+      `;
+      container.appendChild(card);
+    }
   }
+
+  if (!found) {
+    container.innerHTML = "<p>📭 ยังไม่มีการจองห้องในวันนี้</p>";
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  showTodayBookings();
 });
