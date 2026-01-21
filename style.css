@@ -548,15 +548,19 @@ textarea.adminform-control{ /* ✅ปรับหมายเหตุแอด�
 .left-panel {
   flex: 1;
 }
-
 .right-panel {
   flex: 1;
   background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 40px; /* ✅ เพิ่มระยะห่างด้านล่างให้เท่ากัน */
+}
+
+.right-panel h2 {
+  color: #000000;
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
 .booking-list {
@@ -584,7 +588,6 @@ textarea.adminform-control{ /* ✅ปรับหมายเหตุแอด�
 
   .left-panel,
   .right-panel {
-    color: #000000;
     width: 100%;
   }
 
@@ -626,6 +629,7 @@ html, body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+
 
 
 
