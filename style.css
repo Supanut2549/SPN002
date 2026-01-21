@@ -584,6 +584,7 @@ textarea.adminform-control{ /* ✅ปรับหมายเหตุแอด�
 
   .left-panel,
   .right-panel {
+    color: #000000;
     width: 100%;
   }
 
@@ -625,6 +626,7 @@ html, body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+
 
 
 
