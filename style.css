@@ -151,7 +151,10 @@ button:hover {
 }
 
 #bookingTable {
-  min-width: 600px;
+  width: 100%;
+  min-width: unset; /* ลบ min-width: 600px */
+  overflow-x: auto;
+  display: block;
 }
 
 /* ✅ สไตล์เฉพาะหน้าแอดมิน */
@@ -610,4 +613,10 @@ button {
   max-width: 100%;
   font-size: 16px;
   line-height: 1.4;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
