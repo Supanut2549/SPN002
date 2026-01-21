@@ -32,8 +32,12 @@ window.showToast = showToast;
 // ✅ ฟังก์ชันแปลงวันที่เป็น "วัน/เดือน/ปี"
 function formatDate(dateStr) {
   const [year, month, day] = dateStr.split("-");
-  const gregorianYear = parseInt(year) - 543;
-  return `${day}/${month}/${gregorianYear}`;
+  let y = parseInt(year);
+  if (y > 2500) {
+    // เป็น พ.ศ. → แปลงเป็น ค.ศ.
+    y -= 543;
+  }
+  return `${day}/${month}/${y}`;
 }
 
 // ✅ ฟังก์ชันแสดงกราฟสัดส่วนการใช้ห้อง
@@ -210,6 +214,7 @@ async function showTodayBookings() {
 window.addEventListener("DOMContentLoaded", () => {
   showTodayBookings();
 });
+
 
 
 
