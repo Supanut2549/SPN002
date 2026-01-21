@@ -555,6 +555,7 @@ textarea.adminform-control{ /* ✅ปรับหมายเหตุแอด�
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   padding: 16px;
   border-radius: 8px;
+  margin-bottom: 40px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
@@ -624,5 +625,6 @@ html, body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+
 
 
