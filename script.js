@@ -32,7 +32,7 @@ window.showToast = showToast;
 // ✅ ฟังก์ชันแปลงวันที่เป็น "วัน/เดือน/ปี"
 function formatDate(dateStr) {
   const [year, month, day] = dateStr.split("-");
-  const gregorianYear = parseInt(year) - 543;
+  const gregorianYear = parseInt(year) ;
   return `${day}/${month}/${gregorianYear}`;
 }
 
@@ -210,4 +210,5 @@ async function showTodayBookings() {
 window.addEventListener("DOMContentLoaded", () => {
   showTodayBookings();
 });
+
 
