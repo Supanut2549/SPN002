@@ -561,7 +561,7 @@ textarea.adminform-control{ /* ✅ปรับหมายเหตุแอด�
 .booking-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .booking-card {
@@ -624,4 +624,5 @@ html, body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+
 
