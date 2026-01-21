@@ -194,6 +194,7 @@ async function showTodayBookings() {
       card.className = `booking-card room-${booking.room.toLowerCase()}`;
       card.innerHTML = `
         <strong>${booking.name}</strong> (${booking.room})<br>
+        📅 วันที่: ${formatDate(booking.date)}<br>
         🕒 ${booking.startTime} - ${booking.endTime}<br>
         📝 ${booking.note || "-"}
       `;
@@ -209,3 +210,4 @@ async function showTodayBookings() {
 window.addEventListener("DOMContentLoaded", () => {
   showTodayBookings();
 });
+
