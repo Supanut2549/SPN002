@@ -155,8 +155,6 @@ button:hover {
   z-index: 1;
 }
 
-}
-
 #bookingTable {
   width: 100%;
   min-width: unset; /* ลบ min-width: 600px */
@@ -665,6 +663,7 @@ body {
   z-index: 1;
   color: white; /* หรือสีเข้ม ถ้าพื้นหลังสว่าง */
 }
+
 
 
 
