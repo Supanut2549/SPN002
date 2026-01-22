@@ -662,8 +662,16 @@ body {
   color: white; /* หรือสีเข้ม ถ้าพื้นหลังสว่าง */
 }
 
-
-
+button[type="submit"] {
+  color: #000 !important; /* ✅ สีข้อความชัดเจน */
+  font-size: 18px !important;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: visible;
+  background-color: #ffffff;
+}
 
 
 
