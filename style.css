@@ -647,7 +647,7 @@ body {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('your-background.jpg');
+  background-image: url('BG001.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.6) blur(2px); /* ทำให้พื้นหลังมืดลงและเบลอเล็กน้อย */
@@ -659,5 +659,3 @@ body {
   z-index: 1;
   color: white; /* หรือสีเข้ม ถ้าพื้นหลังสว่าง */
 }
-
-
