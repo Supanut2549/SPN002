@@ -107,6 +107,7 @@ button:hover {
   align-items: center;
   padding: 40px 20px;
   min-height: 100vh;
+  padding-bottom: 100px; /* ✅ ป้องกันปุ่มถูกตัดล่าง */
 }
 
 .page-booking h2 {
@@ -663,4 +664,9 @@ body {
   position: relative;
   z-index: 1;
   color: white; /* หรือสีเข้ม ถ้าพื้นหลังสว่าง */
+}
+
+#bookingForm button[type="submit"] { 
+  position: relative; 
+  z-index: 10; 
 }
