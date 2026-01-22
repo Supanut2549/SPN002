@@ -499,7 +499,7 @@ textarea.form-control { /* ✅ปรับหมายเหตุหน้า�
   border: none;
   background-color: rgb(255, 255, 255);
   box-shadow: var(--shadow);
-  font-family: var(--font-main);
+  font-family: 'Kanit', sans-serif;
   margin-bottom: 16px;
   --radius: 12px;
 }
@@ -514,7 +514,7 @@ textarea.adminform-control{ /* ✅ปรับหมายเหตุแอด�
   border: none;
   background-color: rgb(255, 255, 255);
   box-shadow: var(--shadow);
-  font-family: var(--font-main);
+  font-family: 'Kanit', sans-serif;
   margin-bottom: 16px;
   --radius: 12px;
 }
@@ -638,7 +638,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Kanit', sans-serif;
 }
 
 .background-overlay {
@@ -658,5 +658,6 @@ body {
   z-index: 1;
   color: white; /* หรือสีเข้ม ถ้าพื้นหลังสว่าง */
 }
+
 
 
