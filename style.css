@@ -634,7 +634,7 @@ html, body {
 }
 
 body {
-  background-image: url('BG001.jpg'); /* 🔁 เปลี่ยนเป็น URL ของภาพที่คุณเลือก */
+  background-image: url('img/BG001.jpg'); /* 🔁 เปลี่ยนเป็น URL ของภาพที่คุณเลือก */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -647,7 +647,7 @@ body {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('BG001.jpg');
+  background-image: url('img/BG001.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.6) blur(2px); /* ทำให้พื้นหลังมืดลงและเบลอเล็กน้อย */
@@ -659,3 +659,4 @@ body {
   z-index: 1;
   color: white; /* หรือสีเข้ม ถ้าพื้นหลังสว่าง */
 }
+
