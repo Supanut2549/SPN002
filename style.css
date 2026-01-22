@@ -666,15 +666,6 @@ body {
   color: white; /* หรือสีเข้ม ถ้าพื้นหลังสว่าง */
 }
 
-#bookingForm button[type="submit"] { 
-  position: relative; 
-  z-index: 10; 
-}
 
-#bookingForm {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* ✅ รองรับ Safari */
-  background-color: rgba(255, 255, 255, 0.7); /* ✅ fallback เผื่อ blur ไม่ทำงาน */
-  position: relative;
-  z-index: 1;
-}
+
+
