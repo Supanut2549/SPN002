@@ -634,7 +634,7 @@ html, body {
 }
 
 body {
-  background-image: url('your-background.jpg'); /* 🔁 เปลี่ยนเป็น URL ของภาพที่คุณเลือก */
+  background-image: url('BG001.jpg'); /* 🔁 เปลี่ยนเป็น URL ของภาพที่คุณเลือก */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -659,4 +659,5 @@ body {
   z-index: 1;
   color: white; /* หรือสีเข้ม ถ้าพื้นหลังสว่าง */
 }
+
 
