@@ -677,21 +677,22 @@ button[type="submit"] {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-top: -12px;  /* ✅ ขยับขึ้นใกล้หัวข้อ */
+  margin-top: -8px;
   margin-bottom: 16px;
-  padding-right: 24px; /* ✅ ให้ตรงกับกล่อง */
+  padding-right: 24px;
 }
 
 #goToDevPage {
   background-color: #4CAF50;
   color: white;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 6px 12px;
+  font-size: 13px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   transition: background-color 0.2s ease;
+  white-space: nowrap;
 }
 
 #goToDevPage:hover {
