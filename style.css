@@ -673,19 +673,14 @@ button[type="submit"] {
   background-color: #ffffff;
 }
 
-.dev-button-floating {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 8px;
-  padding-right: 24px; /* ให้ตรงกับ padding ของ .right-panel */
-  margin-top: 16px;
-}
-
-#goToDevPage {
+.floating-dev-button {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 999;
   background-color: #4CAF50;
   color: white;
-  padding: 8px 16px;
+  padding: 10px 16px;
   font-size: 14px;
   border: none;
   border-radius: 8px;
@@ -694,9 +689,6 @@ button[type="submit"] {
   transition: background-color 0.2s ease;
 }
 
-#goToDevPage:hover {
+.floating-dev-button:hover {
   background-color: #388E3C;
 }
-
-
-
