@@ -674,18 +674,17 @@ button[type="submit"] {
 }
 
 .dev-button-inline {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   margin-top: -8px;
   margin-bottom: 16px;
-  padding-right: 24px;
+  padding-right: 0;
 }
 
 #goToDevPage {
   background-color: #4CAF50;
   color: white;
-  padding: 6px 12px;
+  padding: 4px 10px;
   font-size: 13px;
   border: none;
   border-radius: 6px;
@@ -693,8 +692,7 @@ button[type="submit"] {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   transition: background-color 0.2s ease;
   white-space: nowrap;
-}
-
-#goToDevPage:hover {
-  background-color: #388E3C;
+  width: auto;
+  min-width: unset;
+  max-width: fit-content;
 }
