@@ -215,6 +215,6 @@ window.addEventListener("DOMContentLoaded", () => {
   showTodayBookings();
 });
 
-
-
-
+document.getElementById("goToDevPage").addEventListener("click", () => {
+  window.location.href = "https://devroom-virid.vercel.app/"; // 🔁 เปลี่ยน URL ตามจริง
+});
