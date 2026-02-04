@@ -673,14 +673,19 @@ button[type="submit"] {
   background-color: #ffffff;
 }
 
-.floating-dev-button {
-  position: fixed;
-  top: 20px;
-  right: 24px;
-  z-index: 999;
+.dev-button-inline {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -12px;  /* ✅ ขยับขึ้นใกล้หัวข้อ */
+  margin-bottom: 16px;
+  padding-right: 24px; /* ✅ ให้ตรงกับกล่อง */
+}
+
+#goToDevPage {
   background-color: #4CAF50;
   color: white;
-  padding: 10px 16px;
+  padding: 8px 16px;
   font-size: 14px;
   border: none;
   border-radius: 8px;
@@ -689,6 +694,6 @@ button[type="submit"] {
   transition: background-color 0.2s ease;
 }
 
-.floating-dev-button:hover {
+#goToDevPage:hover {
   background-color: #388E3C;
 }
