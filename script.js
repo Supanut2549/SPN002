@@ -128,7 +128,7 @@ document.getElementById("bookingForm").addEventListener("submit", async function
       const bookedEnd = booking.endTime;
 
       // ✅ ตรวจสอบช่วงเวลาซ้ำ
-      if (startTime < bookedEnd && endTime > bookedStart) {
+      if (startTime <= bookedEnd && endTime > bookedStart) {
         conflict = true;
         break;
       }
@@ -218,4 +218,5 @@ window.addEventListener("DOMContentLoaded", () => {
 document.getElementById("goToDevPage").addEventListener("click", () => {
   window.location.href = "https://devroom-virid.vercel.app/"; // 🔁 เปลี่ยน URL ตามจริง
 });
+
 
